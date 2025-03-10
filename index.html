@@ -6,10 +6,81 @@
     <meta name="description" content="Xavier Audebert, naturopathe hygiéniste et réflexologue plantaire à Saint-Maur-des-Fossés. Consultations, accompagnement personnalisé, formations et randonnées naturopathiques.">
     <title>Xavier Audebert - Naturopathe et Réflexologue Plantaire</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: "Garamond", serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f2e9;
+            color: #4a3f35;
+            line-height: 1.8;
+        }
+        header {
+            background: #6d4c41;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2em;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            background: #a1887f;
+            padding: 10px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #6d4c41;
+        }
+        section h2 {
+            color: #6d4c41;
+            border-bottom: 1px solid #a1887f;
+            padding-bottom: 5px;
+        }
+        img {
+            display: block;
+            max-width: 80%;
+            margin: 10px auto;
+            border-radius: 5px;
+            border: 3px solid #a1887f;
+        }
+        footer {
+            background: #6d4c41;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .logos img {
+            width: 100px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur le site de Xavier Audebert, naturopathe, réflexoloque, formateur à Saint Maur des fossés.</h1>
+        <h1>Bienvenue sur le site de Xavier Audebert, naturopathe, réflexologue, formateur à Saint Maur des fossés.</h1>
         <nav>
             <ul>
                 <li><a href="#presentation">Présentation</a></li>
@@ -27,8 +98,7 @@
     </header>
 
     <section id="presentation">
-        <h2>Présentation</h2>
-        <img src="https://raw.githubusercontent.com/xanaturo/xa.naturopathe/refs/heads/main/file-GRr2VzsdoNXMXyZLJfJF1d%20(1).webp">
+          <h2>Présentation</h2>
         <p>Je suis Xavier Audebert, naturopathe hygiéniste et réflexologue plantaire diplômé (2019, école Euronature), également certifié par les fédérations nationales FENA et AFNAT. Passionné par la naturopathie, par l’hygiénisme et par la réflexologie plantaire, j’ai à cœur de transmettre ces connaissances pour aider chacun à retrouver un équilibre de vie optimal. Ma promesse est de vous faire vieillir en bonne santé avec une meilleure connaissance de votre organisme (tête, coeur et corps).</p>
     </section>
 
@@ -38,19 +108,20 @@
     </section>
 
     <section id="reflexologie">
-        <h2>Réflexologie Plantaire</h2>
+       <h2>Réflexologie Plantaire</h2>
         <p>La réflexologie plantaire est une technique ancestrale qui vise à rééquilibrer l’organisme par des pressions sur des zones réflexes du pied correspondant aux organes et aux systèmes du corps.</p>
         <p>Bienfaits : Amélioration de la circulation sanguine, diminution du stress, soulagement des douleurs chroniques bref une détente assurée!!</p>
     </section>
 
+
     <section id="programme">
-        <h2>Programme Personnalisé</h2>
+       <h2>Programme Personnalisé</h2>
         <p>Afin d'accompagner au mieux tous ces changements et pour améliorer les troubles digestifs, cutanés, ostéo-articulaire et nerveux, je propose un forfait de 4 séances mêlant naturopathie et réflexologie plantaire pour une intégration optimale de votre nouvelle hygiène de vie. Un appel découverte de 15 minutes est offert pour vous présenter le programme et répondre à vos questions.Un programme sur-mesure pour guider au mieux votre force vitale. En bonus une randonnée en pleine nature sur le secteur île de France!!</p>
         <p><a href="URL_APPEL">Réservez votre appel gratuit</a></p>
     </section>
 
     <section id="formations">
-        <h2>Formations</h2>
+       <h2>Formations</h2>
         <p>J’encadre des naturopathes en formation et propose des spécialisations en hygiénisme et naturopathie selon l’approche de P.V. Marchesseau. Restez connecté pour avoir plus d'informations. Renseignements au 0769180298.</p>
     </section>
 
@@ -83,7 +154,6 @@
             <li>Programme personnalisé (4 séances) : 420€ (acompte de 30% à la première séance, le solde à la deuxième)</li>
             <li>Téléconsultation visio : 65€</li>
         </ul>
-    </section>
 
     <section id="contact">
         <h2>Contact</h2>
@@ -93,7 +163,11 @@
     </section>
 
     <footer>
-        <p><strong>RGPD :</strong> Conformément à la réglementation sur la protection des données, vos informations personnelles ne seront utilisées que dans le cadre de votre suivi naturopathique et ne seront jamais partagées sans votre consentement.</p>
+        <div class="logos">
+            <img src="afnat_logo.png" alt="Logo AFNAT">
+            <img src="fena_logo.png" alt="Logo FENA">
+        </div>
+        <p><strong>RGPD :</strong> Vos informations personnelles ne seront utilisées que dans le cadre de votre suivi naturopathique.</p>
     </footer>
 </body>
 </html>
