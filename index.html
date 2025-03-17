@@ -11,31 +11,37 @@
             box-sizing: border-box;
         }
 
+        /* 🌿 Style général vintage & nature */
         body {
-            font-family: "Arial", sans-serif;
-            background: url
+            font-family: "Garamond", serif;
+            background: url('https://raw.githubusercontent.com/xanaturo/xa.naturopathe/main/fond-nature.jpg') no-repeat center center fixed;
             background-size: cover;
-            color: white;
+            color: #3b3b3b;
             text-align: center;
+            line-height: 1.8;
         }
 
+        /* 📌 Conteneur */
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: auto;
             padding: 20px;
         }
 
+        /* 🔥 En-tête */
         header {
-            background: rgba(44, 62, 80, 0.8);
+            background: rgba(92, 64, 51, 0.85);
             color: white;
-            padding: 20px 0;
-            font-size: 1.5em;
+            padding: 25px 0;
+            font-size: 1.8em;
+            font-weight: bold;
         }
 
+        /* 📍 Navigation */
         nav {
             display: flex;
             justify-content: center;
-            background: rgba(52, 73, 94, 0.8);
+            background: rgba(120, 85, 72, 0.9);
             padding: 10px;
         }
 
@@ -53,45 +59,57 @@
         nav ul li a {
             display: block;
             color: white;
-            padding: 10px 15px;
+            padding: 12px 20px;
             text-decoration: none;
-            background: #1abc9c;
-            border-radius: 5px;
-            text-align: center;
+            background: #5d4037;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
         }
 
         nav ul li a:hover {
-            background: #16a085;
+            background: #8d6e63;
         }
 
+        /* 📌 Sections */
         section {
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(255, 255, 255, 0.9);
             padding: 50px 20px;
-            margin: 20px auto;
+            margin: 25px auto;
             border-radius: 10px;
             max-width: 900px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         section h2 {
+            color: #6d4c41;
+            font-size: 1.8em;
+            border-bottom: 2px solid #8d6e63;
+            display: inline-block;
+            padding-bottom: 8px;
             margin-bottom: 15px;
         }
 
+        /* 📷 Images */
         img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
             margin-top: 10px;
+            border: 3px solid #8d6e63;
         }
 
+        /* 📌 Pied de page */
         footer {
-            background: rgba(44, 62, 80, 0.8);
+            background: rgba(92, 64, 51, 0.9);
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             margin-top: 40px;
+            font-size: 1em;
         }
 
+        /* 📱 Responsive */
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
@@ -101,6 +119,11 @@
             nav ul li {
                 width: 100%;
                 text-align: center;
+            }
+
+            section {
+                width: 90%;
+                padding: 30px 15px;
             }
         }
     </style>
