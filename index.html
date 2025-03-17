@@ -70,17 +70,7 @@
         nav ul li a:hover {
             background: #8d6e63;
         }
-
- 
-        section {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 50px 20px;
-            margin: 25px auto;
-            border-radius: 10px;
-            max-width: 900px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
+        
         section {
     background: rgba(255, 255, 255, 0.85); 
     padding: 50px 20px;
@@ -89,6 +79,7 @@
     max-width: 90%; 
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(5px); 
+    overflow: hidden;        
 }
 
  
@@ -111,16 +102,21 @@
         }
 
     
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
+     @media (max-width: 768px) {
+    section {
+        max-width: 95%; 
+        padding: 30px 15px;
+    }
 
-            nav ul li {
-                width: 100%;
-                text-align: center;
-            }
+    nav ul {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
 
             section {
                 width: 90%;
