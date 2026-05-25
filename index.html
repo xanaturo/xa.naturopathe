@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Xavier//Audebert Naturopathe — Xavier Audebert, Naturopathe & Réflexologue & Institut de formation </title>
+<title>Xa Naturopathe — Xavier Audebert, Naturopathe & Réflexologue à Saint-Maur</title>
 <meta name="description" content="Xavier Audebert, naturopathe hygiéniste et réflexologue plantaire à Saint-Maur-des-Fossés. Consultations, formations, programme Métamorphose et articles sur la naturopathie." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +13,9 @@
     --bg:#f7f4ee;
     --ink:#2d2a26;
     --muted:#6b6660;
-    --brand:#4a6b4d;        /* vert sauge profond */
-    --brand-2:#8aa67b;      /* sauge clair */
-    --accent:#c9844a;       /* terracotta doux */
+    --brand:#4a6b4d;
+    --brand-2:#8aa67b;
+    --accent:#c9844a;
     --card:#ffffffd9;
     --line:#e6e1d6;
     --radius:18px;
@@ -40,7 +40,6 @@
   a:hover{color:var(--accent)}
   img{max-width:100%;height:auto;border-radius:14px;display:block}
 
-  /* HEADER / NAV */
   .topbar{
     position:sticky;top:0;z-index:50;
     background:rgba(247,244,238,.85);
@@ -65,7 +64,6 @@
   nav a:hover{background:var(--brand);color:#fff}
   .menu-btn{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--brand)}
 
-  /* HERO */
   .hero{
     position:relative;
     min-height:78vh;
@@ -92,7 +90,6 @@
   .cta.ghost{background:transparent;border:1.5px solid #fff;color:#fff;margin-left:10px}
   .cta.ghost:hover{background:#fff;color:var(--ink)}
 
-  /* SECTIONS */
   main{max-width:1100px;margin:auto;padding:60px 22px}
   section{
     background:var(--card);
@@ -103,25 +100,15 @@
     margin:28px 0;
     box-shadow:var(--shadow-sm);
   }
-  section h2{
-    display:flex;align-items:center;gap:14px;
-  }
-  section h2::before{
-    content:"";width:36px;height:2px;background:var(--accent);border-radius:2px;
-  }
+  section h2{display:flex;align-items:center;gap:14px;}
+  section h2::before{content:"";width:36px;height:2px;background:var(--accent);border-radius:2px;}
   .lead{font-size:1.05rem;color:var(--muted);margin-bottom:1em}
 
   ul.clean{list-style:none;padding:0;margin:.6em 0}
-  ul.clean li{
-    padding:10px 0 10px 28px;position:relative;border-bottom:1px dashed var(--line);
-  }
+  ul.clean li{padding:10px 0 10px 28px;position:relative;border-bottom:1px dashed var(--line);}
   ul.clean li:last-child{border-bottom:1px dashed var(--line)}
-  ul.clean li::before{
-    content:"";position:absolute;left:0;top:18px;width:14px;height:14px;
-    border-radius:50%;background:var(--brand-2);
-  }
+  ul.clean li::before{content:"";position:absolute;left:0;top:18px;width:14px;height:14px;border-radius:50%;background:var(--brand-2);}
 
-  /* TARIFS */
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
   .price{
     background:#fff;border:1px solid var(--line);border-radius:14px;
@@ -130,7 +117,6 @@
   .price:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
   .price strong{display:block;color:var(--brand);font-size:1.4rem;margin-top:6px;font-family:'Cormorant Garamond',serif}
 
-  /* ARTICLES */
   .articles{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:24px}
   .article-card{
     background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;
@@ -147,7 +133,6 @@
   .article-card h3{margin:0}
   .article-card .read{margin-top:auto;color:var(--accent);font-weight:600;font-size:.95rem}
 
-  /* ARTICLE DETAIL */
   .article-full{
     background:#fff;border:1px solid var(--line);border-radius:var(--radius);
     padding:42px clamp(22px,4vw,52px);margin:28px 0;box-shadow:var(--shadow-sm);
@@ -160,8 +145,13 @@
     border-left:3px solid var(--accent);padding:8px 18px;margin:1.2em 0;
     color:var(--muted);font-style:italic;background:#faf7f1;border-radius:0 10px 10px 0;
   }
+  .article-full .collab-credit{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#faf7f1;border:1px solid var(--line);border-radius:999px;
+    padding:6px 14px;font-size:.82rem;color:var(--muted);margin-bottom:1.4em;
+  }
+  .article-full .collab-credit strong{color:var(--accent)}
 
-  /* FOOTER */
   footer{
     background:#2d2a26;color:#dcd6c8;padding:50px 22px;margin-top:60px;text-align:center;
   }
@@ -170,7 +160,6 @@
   footer .links{margin-top:18px}
   footer .links a{color:#dcd6c8;margin:0 10px;font-size:.9rem}
 
-  /* MOBILE */
   @media(max-width:820px){
     .menu-btn{display:block}
     nav ul{
@@ -266,7 +255,7 @@
     <ul class="clean">
       <li>Réflexologie plantaire — 10 & 11 avril 2025, CMA de Melun <em>(complète)</em></li>
       <li>Gymnastique des organes — 10/06/25, visio 3h <em>(replay disponible)</em></li>
-      <li><strong>Produits de la ruche & leurs bienfaits</strong> — fin novembre 2025, visio 1h30 — <em>replay disponible</em></li>
+      <li><strong>Produits de la ruche & leurs bienfaits</strong> — fin novembre 2025, visio 1h30 — <em>inscriptions ouvertes</em></li>
     </ul>
     <p>Renseignements : <a href="tel:0769180298">07 69 18 02 98</a></p>
   </section>
@@ -286,6 +275,7 @@
     <p class="lead">Des lectures pour approfondir la naturopathie au quotidien — un nouvel article chaque mois.</p>
 
     <div class="articles">
+
       <article class="article-card">
         <div class="thumb">💧</div>
         <div class="body">
@@ -296,13 +286,13 @@
         </div>
       </article>
 
-      <article class="article-card" style="opacity:.7">
-        <div class="thumb" style="background:linear-gradient(135deg,#e7c89b,#c9844a)">🌿</div>
+      <article class="article-card">
+        <div class="thumb" style="background:linear-gradient(135deg,#c8b89a,#8b6f4e)">🌿</div>
         <div class="body">
-          <span class="meta">À venir</span>
-          <h3>Les plantes amies du foie</h3>
-          <p>Chardon-marie, romarin, desmodium… un tour d'horizon des alliées de la détox hépatique.</p>
-          <span class="read">Bientôt disponible</span>
+          <span class="meta">Phytothérapie · 10 min</span>
+          <h3>Troubles ostéo-articulaires & naturopathie</h3>
+          <p>Plantes, gemmothérapie, huiles essentielles… comment la nature peut soulager les douleurs articulaires et soutenir le cartilage.</p>
+          <a class="read" href="#article-osteo">Lire l'article →</a>
         </div>
       </article>
 
@@ -315,9 +305,11 @@
           <span class="read">Bientôt disponible</span>
         </div>
       </article>
+
     </div>
   </section>
 
+  <!-- ====== ARTICLE EAU ====== -->
   <article id="article-eau" class="article-full">
     <span class="meta">Article · Hydrologie</span>
     <h2>L'eau, première médecine du naturopathe</h2>
@@ -355,6 +347,66 @@
 
     <h3>En pratique cette semaine</h3>
     <p>Posez une bouteille ou une carafe en évidence sur votre bureau. Buvez un verre toutes les heures. Observez, sans jugement, ce qui change : votre énergie, votre humeur, votre digestion. L'eau ne remplace pas une bonne hygiène de vie — elle en est la fondation.</p>
+
+    <p style="margin-top:2em"><a href="#articles" class="cta" style="font-size:.95rem;padding:10px 22px">← Retour aux articles</a></p>
+  </article>
+
+  <!-- ====== ARTICLE TROUBLES OSTÉO-ARTICULAIRES ====== -->
+  <article id="article-osteo" class="article-full">
+    <span class="meta">Article · Phytothérapie & Gemmothérapie</span>
+    <h2>Troubles ostéo-articulaires & naturopathie</h2>
+    <p class="meta">Par Xavier Audebert — Naturopathe hygiéniste</p>
+    <div class="collab-credit">✍️ En collaboration avec <strong>Carole Berger</strong> pour le magazine <em>Les Nouvelles Esthétiques</em></div>
+
+    <p>La naturopathie est classée par l'OMS dans la rubrique « médecine traditionnelle non conventionnelle ». Le ton est donné ! Elle ne s'intègre pas dans les conventions, mais est-ce à dire que l'efficacité des plantes est à prouver ? Je ne crois pas. Les plantes, fruits, racines, feuilles, bourgeons ont toujours été là pour nous soutenir et nous renforcer.</p>
+
+    <h3>Le bon interlocuteur : le naturopathe</h3>
+    <p>Il connaît leurs pouvoirs, leurs actions et les contre-indications, et peut adapter les cures à chacun. N'oublions pas que traiter par les plantes n'est pas anodin. Elles sont puissantes. On ne peut pas tout prendre à n'importe quel moment et dans n'importe quelle condition — mais le bon naturopathe est là pour vous aider à y voir plus clair.</p>
+
+    <h3>L'humain dans toute son unité</h3>
+    <p>Le naturopathe s'appuie sur une vision de l'humain dans toute sa complexité et son unicité : une entité globale qui fonctionne sur plusieurs plans — physique, mental, énergétique, psychique, socio-culturel et environnemental.</p>
+    <p><strong>La constitution de base.</strong> Chacun possède d'abord une constitution de base (notamment l'hérédité) : son capital santé. Ce capital fluctue en fonction de l'environnement (alimentation, hygiène de vie…). Ce que nous faisons de notre « capital » dépend de nos choix de vie — ce que l'on appelle le « tempérament » — qui, comme le temps qu'il fait, peut se modifier.</p>
+    <p><strong>L'énergie vitale</strong> se situe dans les glandes endocrines et dans le système nerveux. Elle nourrit votre force vitale qui, elle-même, dépend de son environnement.</p>
+
+    <h3>Les missions du naturopathe</h3>
+    <p>Le premier travail du naturopathe est de comprendre cette constitution de base et ce que son client a mis en place pour l'augmenter ou la diminuer — c'est l'approche du vitalisme. Il prend ensuite la casquette de l'enquêteur, selon la démarche d'Hippocrate :</p>
+    <blockquote>« Pour être un authentique thérapeute, cherche la cause de la cause et traite-la. » — Hippocrate</blockquote>
+    <p>Il travaille autant en prévention, qu'en complémentarité de la médecine allopathique pendant la maladie et après, pour rebâtir le capital santé.</p>
+
+    <h3>Le triangle de la santé</h3>
+    <p>En naturopathie, trois hygiènes sont mises en balance dans la recherche d'équilibre :</p>
+    <ul class="clean">
+      <li><strong>Alimentaire</strong> — la qualité de ce que vous nourrissez votre corps</li>
+      <li><strong>Physique</strong> — avec un intérêt particulier sur les émonctoires</li>
+      <li><strong>Psycho-émotionnelle</strong> — le stress acidifie 400 fois plus que l'alimentation</li>
+    </ul>
+    <p>Des résultats durables nécessitent un protocole sur la durée. Comme toute chose dans la nature, cela prend du temps — et ce temps accordé à soi-même fait toute la différence.</p>
+
+    <h3>La gemmothérapie pour les articulations</h3>
+    <p>La gemmothérapie puise dans les bourgeons leur capital de croissance et leurs principes actifs. <strong>Le cassis (Ribes nigrum)</strong> en est la base essentielle : chef d'orchestre anti-inflammatoire qui guide les autres bourgeons et répond bien à la suractivité immunitaire.</p>
+    <p>On lui associe les <strong>bourgeons de bouleau verruqueux (Betula verrucosa)</strong>, à tropisme articulaire, rénal et hépatique — pour reminéraliser les sujets jeunes et corriger le terrain acide.</p>
+    <p><strong>Posologie :</strong> 7 gouttes de cassis + 8 gouttes de bouleau dans de l'eau — 3 semaines de prise, 3 semaines d'arrêt. Peuvent travailler en synergie avec l'harpagophytum.</p>
+    <p><strong>Précautions :</strong> femmes enceintes, enfants, cancers hormonaux dépendants et traitements anticoagulants.</p>
+
+    <h3>Les huiles essentielles</h3>
+    <ul class="clean">
+      <li><strong>Lavandin super</strong> — fort pouvoir anti-inflammatoire et décontractant</li>
+      <li><strong>Menthe poivrée</strong> — effet antalgique rapide, chauffe la zone douloureuse</li>
+      <li><strong>Gaulthérie</strong> — anti-inflammatoire reconnu, application externe uniquement</li>
+    </ul>
+    <p><strong>Auto-massages :</strong> 2 à 3 gouttes d'huile essentielle dans une cuillère à café d'huile de sésame. Mouvements circulaires doux jusqu'à pénétration, 2 à 3 fois par jour. En cas de tendinite, effet ressenti en une semaine.</p>
+
+    <h3>L'harpagophytum : la plante phare</h3>
+    <p>L'une des plantes les plus étudiées dans les troubles ostéo-articulaires. La teinture mère est préférable (la tisane est très amère) : <strong>25 à 30 gouttes dans un verre d'eau, 2 à 3 fois par jour avant le repas</strong>, pendant 2 à 3 semaines. Faire une pause de 1 à 2 semaines et reprendre si nécessaire. Tous les âges sont concernés.</p>
+
+    <h3>Les amis du cartilage</h3>
+    <p>Le cartilage peut être stimulé par l'alimentation et les compléments : <strong>glucosamine</strong> et <strong>sulfate de chondroïtine</strong> pour le refaire de manière cohérente. L'<strong>ortie</strong> en poudre saupoudrée sur vos plats apporte minéraux, magnésium et calcium — vos articulations vont apprécier.</p>
+    <p>Le <strong>silicium organique</strong> entre dans l'élaboration du cartilage et des fascias, et aide à fixer le calcium dans la trame osseuse. Sa production diminue avec l'âge. Posologie : <strong>15 ml, 2 à 3 fois par jour pendant 2 mois</strong>. On en trouve aussi dans les bananes, dattes, céréales complètes, champignons et oléagineux.</p>
+
+    <h3>Le conseil de Xavier</h3>
+    <p>Ne prenez pas tout en même temps. Idéalement : deux plantes en prise interne (préférence aux plantes fraîches) + un bourgeon pour le terrain de fond + silicium organique pour les plus de 45 ans, ou ortie piquante pour les plus jeunes.</p>
+    <blockquote>« La naturopathie fait le pari inverse du résultat rapide : donner du temps au temps pour retrouver un capital santé optimal et une énergie vitale résiliente. »</blockquote>
+    <p>La plante a besoin qu'on lui accorde du temps pour trouver ses marques dans le corps. Le jeu en vaut la chandelle — les naturopathes le savent, et maintenant vous aussi.</p>
 
     <p style="margin-top:2em"><a href="#articles" class="cta" style="font-size:.95rem;padding:10px 22px">← Retour aux articles</a></p>
   </article>
