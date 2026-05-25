@@ -1,320 +1,400 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xa Naturopathe</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Xa Naturopathe — Xavier Audebert, Naturopathe & Réflexologue à Saint-Maur</title>
+<meta name="description" content="Xavier Audebert, naturopathe hygiéniste et réflexologue plantaire à Saint-Maur-des-Fossés. Consultations, formations, programme Métamorphose et articles sur la naturopathie." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f4ee;
+    --ink:#2d2a26;
+    --muted:#6b6660;
+    --brand:#4a6b4d;        /* vert sauge profond */
+    --brand-2:#8aa67b;      /* sauge clair */
+    --accent:#c9844a;       /* terracotta doux */
+    --card:#ffffffd9;
+    --line:#e6e1d6;
+    --radius:18px;
+    --shadow:0 10px 30px -12px rgba(40,35,30,.25);
+    --shadow-sm:0 4px 14px -6px rgba(40,35,30,.18);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:-.01em;color:var(--ink)}
+  h1{font-size:clamp(2.2rem,4.5vw,3.8rem);line-height:1.1}
+  h2{font-size:clamp(1.6rem,2.8vw,2.4rem);margin-bottom:.6em}
+  h3{font-size:1.35rem;margin-bottom:.3em}
+  p{color:#403c37}
+  a{color:var(--brand);text-decoration:none}
+  a:hover{color:var(--accent)}
+  img{max-width:100%;height:auto;border-radius:14px;display:block}
 
-        
-        body {
-            font-family: "Garamond", serif;
-            background: url('https://raw.githubusercontent.com/xanaturo/xa.naturopathe/main/fond-nature.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #3b3b3b;
-            text-align: center;
-            line-height: 1.8;
-        }
+  /* HEADER / NAV */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,244,238,.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    max-width:1200px;margin:auto;padding:14px 22px;
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+  }
+  .brand{
+    font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.4rem;
+    color:var(--brand);letter-spacing:.02em;
+  }
+  .brand span{color:var(--accent)}
+  nav ul{display:flex;flex-wrap:wrap;gap:4px;list-style:none}
+  nav a{
+    display:inline-block;padding:8px 14px;border-radius:999px;
+    font-size:.92rem;color:var(--ink);font-weight:500;
+    transition:all .2s ease;
+  }
+  nav a:hover{background:var(--brand);color:#fff}
+  .menu-btn{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--brand)}
 
+  /* HERO */
+  .hero{
+    position:relative;
+    min-height:78vh;
+    display:flex;align-items:center;justify-content:center;
+    background:
+      linear-gradient(135deg,rgba(45,42,38,.55),rgba(74,107,77,.45)),
+      url('https://raw.githubusercontent.com/xanaturo/xa.naturopathe/main/fond-nature.jpg') center/cover no-repeat;
+    color:#fff;text-align:center;padding:80px 22px;
+  }
+  .hero h1{color:#fff;max-width:14ch;margin:0 auto .25em}
+  .hero p{color:#f3eee4;font-size:1.15rem;max-width:60ch;margin:0 auto 28px}
+  .hero .tag{
+    display:inline-block;padding:6px 14px;border:1px solid rgba(255,255,255,.5);
+    border-radius:999px;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;
+    margin-bottom:24px;color:#fff;
+  }
+  .cta{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--accent);color:#fff;padding:14px 26px;
+    border-radius:999px;font-weight:600;letter-spacing:.02em;
+    box-shadow:var(--shadow);transition:transform .2s ease,background .2s ease;
+  }
+  .cta:hover{transform:translateY(-2px);background:#b3713c;color:#fff}
+  .cta.ghost{background:transparent;border:1.5px solid #fff;color:#fff;margin-left:10px}
+  .cta.ghost:hover{background:#fff;color:var(--ink)}
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
-        }
+  /* SECTIONS */
+  main{max-width:1100px;margin:auto;padding:60px 22px}
+  section{
+    background:var(--card);
+    backdrop-filter:blur(6px);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:42px clamp(22px,4vw,52px);
+    margin:28px 0;
+    box-shadow:var(--shadow-sm);
+  }
+  section h2{
+    display:flex;align-items:center;gap:14px;
+  }
+  section h2::before{
+    content:"";width:36px;height:2px;background:var(--accent);border-radius:2px;
+  }
+  .lead{font-size:1.05rem;color:var(--muted);margin-bottom:1em}
 
+  ul.clean{list-style:none;padding:0;margin:.6em 0}
+  ul.clean li{
+    padding:10px 0 10px 28px;position:relative;border-bottom:1px dashed var(--line);
+  }
+  ul.clean li:last-child{border-bottom:1px dashed var(--line)}
+  ul.clean li::before{
+    content:"";position:absolute;left:0;top:18px;width:14px;height:14px;
+    border-radius:50%;background:var(--brand-2);
+  }
 
-        header {
-            background: rgba(92, 64, 51, 0.85);
-            color: white;
-            padding: 25px 0;
-            font-size: 1.8em;
-            font-weight: bold;
-        }
+  /* TARIFS */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+  .price{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:22px;text-align:left;transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .price:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+  .price strong{display:block;color:var(--brand);font-size:1.4rem;margin-top:6px;font-family:'Cormorant Garamond',serif}
 
-      
-        nav ul {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-}
+  /* ARTICLES */
+  .articles{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:24px}
+  .article-card{
+    background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;
+    display:flex;flex-direction:column;transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .article-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .article-card .thumb{
+    aspect-ratio:16/10;background:linear-gradient(135deg,#bfd6c4,#7fa090);
+    display:flex;align-items:center;justify-content:center;color:#fff;
+    font-family:'Cormorant Garamond',serif;font-size:2.4rem;
+  }
+  .article-card .body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .article-card .meta{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+  .article-card h3{margin:0}
+  .article-card .read{margin-top:auto;color:var(--accent);font-weight:600;font-size:.95rem}
 
-nav ul li {
-    margin: 5px;
-}
+  /* ARTICLE DETAIL */
+  .article-full{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:42px clamp(22px,4vw,52px);margin:28px 0;box-shadow:var(--shadow-sm);
+  }
+  .article-full h2{margin-bottom:.2em}
+  .article-full .meta{color:var(--muted);font-size:.9rem;margin-bottom:1.4em}
+  .article-full h3{margin-top:1.4em;color:var(--brand)}
+  .article-full p{margin:.8em 0}
+  .article-full blockquote{
+    border-left:3px solid var(--accent);padding:8px 18px;margin:1.2em 0;
+    color:var(--muted);font-style:italic;background:#faf7f1;border-radius:0 10px 10px 0;
+  }
 
-nav ul li a {
-    display: block;
-    color: white;
-    padding: 10px 12px;
-    text-decoration: none;
-    background: #1abc9c;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1em;
-}
-        
-        section {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 30px 15px; 
-    margin: 15px auto; 
-    border-radius: 10px;
-    max-width: 90%; 
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(5px);
-    overflow: hidden; 
+  /* FOOTER */
+  footer{
+    background:#2d2a26;color:#dcd6c8;padding:50px 22px;margin-top:60px;text-align:center;
+  }
+  footer .brand{color:#fff;display:block;margin-bottom:8px}
+  footer p{color:#a8a299;font-size:.9rem;max-width:60ch;margin:6px auto}
+  footer .links{margin-top:18px}
+  footer .links a{color:#dcd6c8;margin:0 10px;font-size:.9rem}
 
- 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-top: 10px;
-            border: 3px solid #8d6e63;
-        }
-
- 
-        footer {
-            background: rgba(92, 64, 51, 0.9);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 1em;
-        }
-
-    
-     @media (max-width: 768px) {
-    section {
-        max-width: 95%;
-        padding: 20px 10px;
+  /* MOBILE */
+  @media(max-width:820px){
+    .menu-btn{display:block}
+    nav ul{
+      display:none;position:absolute;top:64px;right:14px;left:14px;
+      flex-direction:column;background:#fff;padding:14px;border-radius:14px;
+      box-shadow:var(--shadow);border:1px solid var(--line);
     }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-    section h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    text-align: center;
-}
-    </style>
+    nav.open ul{display:flex}
+    nav a{display:block;width:100%}
+    .hero{min-height:70vh}
+    .cta.ghost{margin:10px 0 0}
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenue sur le site de Xavier Audebert, naturopathe, réflexologue, formateur à Saint-Maur-des-Fossés.</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#presentation">Présentation</a></li>
-            <li><a href="#naturopathie">Naturopathie</a></li>
-            <li><a href="#reflexologie">Réflexologie Plantaire</a></li>
-            <li><a href="#programme">TON Programme-signature "Métamorphose"</a></li>
-            <li><a href="#formations">Formations</a></li>
-            <li><a href="#Écothérapie & Connexion à la Nature">Écothérapie & Connexion à la Nature</a></li>
-            <li><a href="#randos">Randonnées/Naturopathie</a></li>
-            <li><a href="#actualites">Actualités</a></li>
-            <li><a href="#tarifs">Tarifs</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-    <img src="https://github.com/xanaturo/xa.naturopathe/blob/main/Pre%CC%81sentation.jpeg?raw=true">
-    <section id="presentation">
-          <h2>Présentation</h2>
-        <p>Je suis Xavier Audebert, naturopathe hygiéniste et réflexologue plantaire diplômé (2019, école Euronature), également certifié par les fédérations nationales FENA et AFNAT. Passionné par la naturopathie, par l’hygiénisme et par la réflexologie plantaire, j’ai à cœur de transmettre ces connaissances pour aider chacun à retrouver un équilibre de vie optimal. Ma promesse est de vous faire vieillir en bonne santé avec une meilleure connaissance de votre organisme (tête, coeur et corps).</p>
-    </section>
 
-        <section id="naturopathie">     
-        <h2>Naturopathie</h2>
-            <img src="https://github.com/xanaturo/xa.naturopathe/blob/main/te%CC%81le%CC%81chargement%20(3).jpeg?raw=true">
-        <p>Je pratique une naturopathie hygiéniste qui repose sur la mise en place de cures de détoxification, de revitalisation et de stabilisation. L’objectif est d’accompagner chaque personne vers une meilleure compréhension de son corps et de ses besoins naturels. De l'hydrologie, de la gymnastique des organes et des super-aliments...un beau programme non?</p>
-    </section>
-
-    
-        <section id="reflexologie">
-       <h2>Réflexologie Plantaire</h2>
-            <img src="https://github.com/xanaturo/xa.naturopathe/blob/main/te%CC%81le%CC%81chargement%20(2).jpeg?raw=true">
-        <p>La réflexologie plantaire est une technique ancestrale qui vise à rééquilibrer l’organisme par des pressions sur des zones réflexes du pied correspondant aux organes et aux systèmes du corps.</p>
-        <p>Bienfaits : Amélioration de la circulation sanguine, diminution du stress, soulagement des douleurs chroniques bref une détente assurée!!</p>
-    </section>
-
-
-     
-        <section id="programme">
-       <h2>Ton programme-signature "Métamorphose"</h2>
-            <img src="images.coach.jpeg">
-      
- <h3>✨ Ce que tu vas vivre :</h3>
-  <p>Un accompagnement en présentiel mêlant naturopathie, réflexologie plantaire et hygiène de vie personnalisée. Ce programme agit à la racine de tes déséquilibres digestifs, nerveux ou hormonaux en t’offrant une approche sur mesure, concrète et durable.</p>
-
-  <h3>🧭 Ce que comprend l’accompagnement :</h3>
-  <ul>
-    <li><strong>Appel découverte offert (30 min) :</strong> Un échange pour comprendre tes besoins, tes objectifs et adapter le programme à ton profil.</li>
-
-    <li><strong>Séance 1 :</strong> Bilan global (1h30) — Évaluation de ton terrain, de ton alimentation, de ton sommeil et de ton stress. Mise en place du premier plan d’action et introduction au <em>journal alimentaire</em>.</li>
-
-    <li><strong>Séances 2 à 4 :</strong> Suivi naturopathique & réflexologie plantaire (1h30 chacune) — Ajustements nutritionnels, accompagnement sur la digestion, le stress et la vitalité. Séances de réflexologie ciblées (digestif, nerveux, immunitaire).</li>
-
-    <li><strong>Outils pratiques inclus :</strong> Journal alimentaire et carnet d’observation, plan alimentaire personnalisé, recettes adaptées à ton tempérament, et conseils pour trouver de bons produits locaux.</li>
-
-    <li><strong>Suivi personnalisé entre les séances :</strong> Appels et échanges par mail pour ajuster le protocole selon tes retours, ton rythme et tes ressentis.</li>
-
-    <li><strong>Accès offert à mes formations en ligne :</strong> 
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Xa<span>·</span>Naturopathe</div>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <nav id="nav">
       <ul>
-        <li>Formation <em>Gymnastique des organes</em> — pour retrouver le tonus digestif et la circulation énergétique.</li>
-        <li>Formation <em>Gestion du stress</em> — pour comprendre les manifestations du stress et apprendre des techniques concrètes de régulation.</li>
+        <li><a href="#presentation">Présentation</a></li>
+        <li><a href="#naturopathie">Naturopathie</a></li>
+        <li><a href="#reflexologie">Réflexologie</a></li>
+        <li><a href="#metamorphose">Métamorphose</a></li>
+        <li><a href="#formations">Formations</a></li>
+        <li><a href="#ecotherapie">Écothérapie</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </li>
-  </ul>
+    </nav>
+  </div>
+</header>
 
-  <h3>🎯 Pour qui ?</h3>
-  <ul>
-    <li>Fatigue chronique, digestion lente, ballonnements, acidité, constipation ou peau à problèmes</li>
-    <li>Stress, tensions nerveuses, troubles du sommeil ou terrain inflammatoire</li>
-    <li>Besoin d’un accompagnement structuré, humain et ancré dans la pratique</li>
-  </ul>
-
-  <h3>💰 Tarif unique :</h3>
-  <ul>
-    <li><strong>Programme complet (4 mois) :</strong> 600 €</li>
-    <li>Paiement en deux fois possible (30 % à la première séance, solde à la seconde)</li>
-  </ul>
-
-  <h3>🎁 Bonus :</h3>
-  <ul>
-    <li>Accès à toutes les formations citées ci-dessus</li>
-    <li>Supports PDF et fiches pratiques personnalisées (recettes, organisation, relaxation)</li>
-    <li>Suivi post-programme par mail pour consolider les acquis</li>
-  </ul>
-
-  <h3>🌱 Ce que tu vas gagner :</h3>
-  <ul>
-    <li>Une digestion plus fluide et un ventre apaisé</li>
-    <li>Une meilleure énergie, un sommeil réparateur et un stress maîtrisé</li>
-    <li>Une peau plus nette et un corps revitalisé</li>
-    <li>Une vision claire de ton équilibre global et de ta trajectoire personnelle</li>
-  </ul>
-
-</section>
-   
-       <section id="formations">
-       <h2>Formations</h2>
-             <img src="téléchargement 5.jpeg">
-        <p>Formateur en naturopathie, réflexologie plantaire et accompagnement au projet professionnel, je propose des spécialisations en hygiénisme et naturopathie selon l’approche de P.V. Marchesseau. Restez connecté pour avoir plus d'informations. Renseignements au 0769180298.
-            FORMATION réflexologie plantaire 10 et 11 avril 2025 CMA de Melun (complète). 
-            FORMATION le 10/06/25 (complète) sur la GYMNASTIQUE DES ORGANES en visio 03h, REPLAY DISPONIBLE.
-        FORMATION SUR LES PRODUITS DE LA RUCHE ET LEURS BIENFAITS FIN NOVEMBRE 2025 EN VISIO 1H30, INSCRIPTIONS OUVERTES</p>
-    </section>
-
-        <section id="Écothérapie & Connexion à la Nature">
-             <h2 class="section-title" style="color: #2b5d2b; font-weight: 700; margin-bottom: 30px;">
-      Écothérapie & Connexion à la Nature
-    </h2>
-            <img 
-      src="https://xanaturo.github.io/xa.naturopathe/4.-L_accompagnement-de-quoi-s_agit-il-portrait-panorama-f5bf217956e421ce29064521f6a97599-tyd4xoqjviap.jpg" 
-      alt="Accompagnement en nature" 
-      style="display: block; max-width: 100%; height: auto; margin: 20px auto 40px; border-radius: 10px;"
-    />
-  <div class="container">
-   
-    <p class="section-text" style="max-width: 700px; margin: 0 auto 30px; color: #2f4f2f; font-size: 17px; line-height: 1.7;">
-      La nature est une force puissante et bienveillante, capable de nous réconcilier avec notre corps, notre esprit et notre environnement.  
-      En renouant avec les rythmes naturels et en nous immergeant dans des espaces verts, nous retrouvons un équilibre profond et durable,  
-      loin du stress et de la surcharge de la vie moderne.  
-      L’écothérapie est une approche holistique qui utilise cette force de la nature pour soutenir la santé physique et émotionnelle,  
-      par des séances individuelles en milieu naturel mêlant exercices de respiration, marche consciente et moments de pleine présence.
-    </p>
-    <p class="section-text" style="max-width: 700px; margin: 0 auto 40px; color: #3a5d3a; font-size: 15px; line-height: 1.5;">
-      De nombreuses études scientifiques démontrent les bénéfices de la nature sur notre santé : réduction du cortisol (hormone du stress), amélioration de la concentration, stimulation du système immunitaire, et augmentation du bien-être général.  
-      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5580555/" target="_blank" style="color: #2b5d2b; text-decoration: underline;">Étude sur les effets de la nature sur le stress (PMC)</a>,  
-      <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2019.02614/full" target="_blank" style="color: #2b5d2b; text-decoration: underline;">Revue sur la santé mentale et la nature (Frontiers in Psychology)</a>,  
-      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6125030/" target="_blank" style="color: #2b5d2b; text-decoration: underline;">Impact de la nature sur le système immunitaire (PMC)</a>.
-    </p>
-    <div style="max-width: 700px; margin: 0 auto; background: #d4e8d4; padding: 22px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
-      <h3 style="color: #2b5d2b; margin-bottom: 12px;">Accompagnement individuel en nature</h3>
-      <p style="color: #365936;">
-        Je vous propose des séances individuelles d’écothérapie en milieu naturel, mêlant naturopathie, marche consciente,  
-        exercices de respiration et connexion profonde à l’environnement pour retrouver équilibre, vitalité et sérénité.  
-        Contactez-moi pour réserver votre séance et entamer ce voyage intérieur au cœur de la nature.
-      </p>
-    </div>
+<section class="hero">
+  <div>
+    <span class="tag">Naturopathie · Réflexologie · Saint-Maur</span>
+    <h1>Vieillir en bonne santé, en harmonie avec votre nature.</h1>
+    <p>Xavier Audebert — naturopathe hygiéniste & réflexologue plantaire. Un accompagnement personnalisé pour retrouver énergie, équilibre et sérénité.</p>
+    <a class="cta" href="#contact">Prendre rendez-vous</a>
+    <a class="cta ghost" href="#articles">Lire les articles</a>
   </div>
 </section>
 
- 
-        <h2>Randonnées Naturopathiques</h2>
-         <img src="https://github.com/xanaturo/xa.naturopathe/blob/main/te%CC%81le%CC%81chargement.jpeg?raw=true">
-     <section id="randos">
-        <p>Après avoir obtenu la certification niveau 1 d'accompagnateur de randonnée pédestre (FFMM), j'organise chaque mois, une randonnée en région parisienne avec un atelier naturopathique de 30 minutes sur donation libre. Il suffit juste de me contacter par téléphone (envoi SMS) afin d'être intégré dans notre groupe Whastapp de marcheur/ses (groupe naturo/rando).</p>
-    </section>
+<main>
 
-    <section id="actualites">
-        <h2>Actualités</h2>
-        <img src="téléchargement domaine du tardais.jpeg">
-        <p>Restez informé des dernières nouvelles et événements:
-            WE yoga//naturopathie au domaine du Tardais, à seulement 2h de Paris. Une parenthèse qui a fait du bien à tout le monde, merci à toutes les participantes...à refaire!! </p>
-    </section>
+  <section id="presentation">
+    <h2>Présentation</h2>
+    <p>Je suis Xavier Audebert, naturopathe hygiéniste et réflexologue plantaire diplômé (2019, école Euronature), également certifié par les fédérations FENA et AFNAT. Passionné par la naturopathie, l'hygiénisme et la réflexologie plantaire, j'ai à cœur de transmettre ces connaissances pour vous aider à retrouver un équilibre de vie optimal — tête, cœur et corps.</p>
+  </section>
 
-    <section id="tarifs">
-        <h2>Tarifs</h2>
-        <ul>
-            <li>Consultation de naturopathie : 80€</li>
-            <li>Consultation de suivi naturopathie : 65€</li>
-            <li>Séance de réflexologie plantaire : 60€</li>
-            <li>Séance de suivi réflexologie plantaire : 30€</li>
-            <li>Ton programme-signature "Métamorpphose" (4 séances) : 600€ (acompte de 30% à la première séance, le solde à la deuxième)-Version Premium 520 € (inclut une séance réflexologie supplémentaire + guide PDF exclusif)</li>
-            <li>Téléconsultation visio : 65€</li>
-            <li>Formations "Les bienfaits des produits de la ruche (miel, propolis, gelée royale..". Formation fin octobre 2025 en visio 1h30 (replay et support fourni)!! </li>
-        </ul>
-        
-     <section id="Paiements Formation">
-         <h2>Effectuer un Paiement</h2>
-    <p>Pour régler vos formations, vous pouvez effectuer votre paiement en ligne via PayPal </p>
-    <p>Profitez de cette offre spéciale :</p>
-    <div class="promotion">
-        <p><strong>Promotion : 30 euros pour 1h30 de formation!!! REPLAY ET SUPPORT INCLUS!!!</strong></p>
-        <p>Pour les 40 premiers inscrits seulement !</p>
-    </div>
-    <p>Réservez votre place dès maintenant :</p>
-   <p>Découvrez les trésors thérapeutiques des produits de la ruche : miel, pollen, propolis et gelée royale.  
-Une formation complète pour les utiliser avec justesse en naturopathie.</p>
+  <section id="naturopathie">
+    <h2>Naturopathie</h2>
+    <p>Je pratique une naturopathie hygiéniste reposant sur les cures de détoxification, de revitalisation et de stabilisation. L'objectif : mieux comprendre votre corps et ses besoins naturels. Hydrologie, gymnastique des organes, super-aliments… un beau programme, non ?</p>
+  </section>
 
-<a href="https://www.paypal.com/ncp/payment/VZFLMRT3UJQLE" target="_blank" style="display: inline-block; background-color: #ffc439; color: #111; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
-  INSCRIPTIONS ET PAIEMENT SUR CE LIEN
-</a>
+  <section id="reflexologie">
+    <h2>Réflexologie Plantaire</h2>
+    <p>Une technique ancestrale qui rééquilibre l'organisme par des pressions sur les zones réflexes du pied correspondant aux organes et systèmes du corps.</p>
+    <p><strong>Bienfaits :</strong> meilleure circulation sanguine, réduction du stress, soulagement des douleurs chroniques — détente assurée.</p>
+  </section>
 
-</section>
-        
-        
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Téléphone : 07 69 18 02 98 // le cabinet se trouve  au 8/12 avenue du 4 septembre à Saint Maur des Fossés.</p>
-        <p>Email : <a href="mailto:xavier.audebert.naturopathe@gmail.com">xavier.audebert.naturopathe@gmail.com</a></p>
-        <p>Prise de RDV (en tapant naturopathe sur Saint Maur des fossés) : <a href="https://www.resalib.fr/">Resalib</a></p>
-    </section>
+  <section id="metamorphose">
+    <h2>Programme-signature « Métamorphose »</h2>
+    <p class="lead">✨ Un accompagnement en présentiel mêlant naturopathie, réflexologie plantaire et hygiène de vie personnalisée. Agit à la racine des déséquilibres digestifs, nerveux ou hormonaux.</p>
 
-    <footer>
-        <div class="logos">
-            <img src="https://github.com/xanaturo/xa.naturopathe/blob/main/OMNES.jpeg?raw=true">
-            <img src="data:image/png;base64,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">
-            <img src="data:image/png;base64,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">
+    <h3>🧭 Ce que comprend l'accompagnement</h3>
+    <ul class="clean">
+      <li><strong>Appel découverte offert (30 min)</strong> — comprendre vos besoins et adapter le programme.</li>
+      <li><strong>Séance 1 — Bilan global (1h30)</strong> — terrain, alimentation, sommeil, stress, premier plan d'action.</li>
+      <li><strong>Séances 2 à 4 (1h30)</strong> — suivi naturopathique & réflexologie plantaire ciblée.</li>
+      <li><strong>Outils pratiques</strong> — journal alimentaire, plan personnalisé, recettes et adresses locales.</li>
+      <li><strong>Suivi entre séances</strong> — appels et e-mails pour ajuster le protocole.</li>
+      <li><strong>Formations en ligne offertes</strong> — Gymnastique des organes & Gestion du stress.</li>
+    </ul>
+
+    <h3>🎯 Pour qui ?</h3>
+    <ul class="clean">
+      <li>Fatigue chronique, digestion lente, ballonnements, peau à problèmes</li>
+      <li>Stress, tensions nerveuses, troubles du sommeil, terrain inflammatoire</li>
+      <li>Besoin d'un accompagnement structuré, humain et concret</li>
+    </ul>
+
+    <h3>💰 Tarif</h3>
+    <p>Programme complet (4 mois) : <strong>600 €</strong> — paiement en 2 fois possible (30 % à la 1ʳᵉ séance).</p>
+  </section>
+
+  <section id="formations">
+    <h2>Formations</h2>
+    <p>Formateur en naturopathie, réflexologie plantaire et accompagnement au projet professionnel, je propose des spécialisations selon l'approche hygiéniste de P.V. Marchesseau.</p>
+    <ul class="clean">
+      <li>Réflexologie plantaire — 10 & 11 avril 2025, CMA de Melun <em>(complète)</em></li>
+      <li>Gymnastique des organes — 10/06/25, visio 3h <em>(replay disponible)</em></li>
+      <li><strong>Produits de la ruche & leurs bienfaits</strong> — fin novembre 2025, visio 1h30 — <em>inscriptions ouvertes</em></li>
+    </ul>
+    <p>Renseignements : <a href="tel:0769180298">07 69 18 02 98</a></p>
+  </section>
+
+  <section id="ecotherapie">
+    <h2>Écothérapie & Connexion à la Nature</h2>
+    <p>La nature nous réconcilie avec notre corps, notre esprit et notre environnement. L'écothérapie utilise cette force pour soutenir la santé physique et émotionnelle : séances individuelles en milieu naturel, respiration, marche consciente, pleine présence.</p>
+    <p>De nombreuses études le confirment : baisse du cortisol, meilleure concentration, soutien immunitaire, bien-être accru.</p>
+
+    <h3>Randonnées Naturopathiques</h3>
+    <p>Certifié accompagnateur de randonnée pédestre (FFMM niveau 1), j'organise chaque mois une randonnée en région parisienne avec un atelier naturopathique de 30 minutes — sur donation libre. Contactez-moi par SMS pour rejoindre le groupe WhatsApp naturo/rando.</p>
+  </section>
+
+  <!-- ====== ARTICLES ====== -->
+  <section id="articles">
+    <h2>Articles</h2>
+    <p class="lead">Des lectures pour approfondir la naturopathie au quotidien — un nouvel article chaque mois.</p>
+
+    <div class="articles">
+      <article class="article-card">
+        <div class="thumb">💧</div>
+        <div class="body">
+          <span class="meta">Hydrologie · 5 min</span>
+          <h3>L'eau, première médecine du naturopathe</h3>
+          <p>Pourquoi, combien, quand et comment boire — les clés pour faire de l'eau votre meilleure alliée santé.</p>
+          <a class="read" href="#article-eau">Lire l'article →</a>
         </div>
-        <p><strong>RGPD :</strong> Vos informations personnelles ne seront utilisées que dans le cadre de votre suivi naturopathique.</p>
-    </footer>
+      </article>
+
+      <article class="article-card" style="opacity:.7">
+        <div class="thumb" style="background:linear-gradient(135deg,#e7c89b,#c9844a)">🌿</div>
+        <div class="body">
+          <span class="meta">À venir</span>
+          <h3>Les plantes amies du foie</h3>
+          <p>Chardon-marie, romarin, desmodium… un tour d'horizon des alliées de la détox hépatique.</p>
+          <span class="read">Bientôt disponible</span>
+        </div>
+      </article>
+
+      <article class="article-card" style="opacity:.7">
+        <div class="thumb" style="background:linear-gradient(135deg,#b8c8d8,#6b8aa6)">🌬️</div>
+        <div class="body">
+          <span class="meta">À venir</span>
+          <h3>Respiration & système nerveux</h3>
+          <p>Comment quelques minutes de respiration consciente peuvent transformer votre journée.</p>
+          <span class="read">Bientôt disponible</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <article id="article-eau" class="article-full">
+    <span class="meta">Article · Hydrologie</span>
+    <h2>L'eau, première médecine du naturopathe</h2>
+    <p class="meta">Par Xavier Audebert — Naturopathe hygiéniste</p>
+
+    <p>En naturopathie hygiéniste, l'eau n'est pas un détail : c'est le premier des outils de santé. Notre corps en est composé à près de 65 %, notre sang à 80 %, notre cerveau à plus de 75 %. Chaque cellule, chaque organe, chaque fonction vitale dépend d'un terrain bien hydraté. Pourtant, beaucoup d'entre nous boivent trop peu, trop tard, ou la mauvaise eau.</p>
+
+    <h3>Pourquoi l'eau est essentielle</h3>
+    <p>L'eau intervient dans presque tout : transport des nutriments, élimination des déchets via les reins, régulation de la température, lubrification des articulations, qualité de la peau, tonus mental. Une déshydratation même légère (1 à 2 % du poids corporel) suffit à provoquer fatigue, maux de tête, baisse de concentration et constipation.</p>
+
+    <blockquote>« Là où l'eau circule, la vie circule. Là où elle stagne ou manque, le terrain s'encrasse. »</blockquote>
+
+    <h3>Combien boire chaque jour ?</h3>
+    <p>La recommandation classique de <strong>1,5 à 2 litres par jour</strong> reste un bon repère, à adapter selon votre poids, votre activité physique, la saison et votre alimentation. Une personne qui consomme beaucoup de fruits et légumes frais (eux-mêmes très hydratants) aura des besoins légèrement inférieurs à quelqu'un dont l'alimentation est sèche et transformée.</p>
+
+    <h3>Quand boire ?</h3>
+    <ul class="clean">
+      <li><strong>Au réveil</strong> : un grand verre d'eau tiède pour relancer en douceur les émonctoires.</li>
+      <li><strong>Entre les repas</strong> : pour ne pas diluer les sucs digestifs.</li>
+      <li><strong>En petites gorgées</strong> tout au long de la journée plutôt qu'un litre d'un coup.</li>
+      <li><strong>Avant 18 h</strong> de préférence, pour ne pas perturber le sommeil.</li>
+    </ul>
+
+    <h3>Quelle eau choisir ?</h3>
+    <p>En naturopathie, on privilégie une <strong>eau peu minéralisée</strong> (résidu sec inférieur à 150 mg/L) : Mont Roucous, Montcalm, Rosée de la Reine, Volvic… Ces eaux « légères » facilitent le drainage des déchets sans surcharger les reins. Les eaux fortement minéralisées (Hépar, Contrex, Vichy) sont des eaux thérapeutiques, à utiliser ponctuellement et non au quotidien.</p>
+    <p>L'eau du robinet, si elle est filtrée (charbon, osmose, perles de céramique), reste une option écologique et économique tout à fait valable.</p>
+
+    <h3>Les signes d'une bonne hydratation</h3>
+    <ul class="clean">
+      <li>Urines claires, peu odorantes, 5 à 7 fois par jour</li>
+      <li>Peau souple, lèvres non desséchées</li>
+      <li>Transit régulier</li>
+      <li>Énergie stable, esprit clair</li>
+    </ul>
+
+    <h3>En pratique cette semaine</h3>
+    <p>Posez une bouteille ou une carafe en évidence sur votre bureau. Buvez un verre toutes les heures. Observez, sans jugement, ce qui change : votre énergie, votre humeur, votre digestion. L'eau ne remplace pas une bonne hygiène de vie — elle en est la fondation.</p>
+
+    <p style="margin-top:2em"><a href="#articles" class="cta" style="font-size:.95rem;padding:10px 22px">← Retour aux articles</a></p>
+  </article>
+
+  <section id="tarifs">
+    <h2>Tarifs</h2>
+    <div class="grid">
+      <div class="price">Consultation naturopathie<strong>80 €</strong></div>
+      <div class="price">Suivi naturopathie<strong>65 €</strong></div>
+      <div class="price">Réflexologie plantaire<strong>60 €</strong></div>
+      <div class="price">Suivi réflexologie<strong>30 €</strong></div>
+      <div class="price">Téléconsultation visio<strong>65 €</strong></div>
+      <div class="price">Programme Métamorphose (4 séances)<strong>600 €</strong><small>Premium 520 € — séance réflexo + guide PDF</small></div>
+      <div class="price">Formation « Produits de la ruche » — visio 1h30<strong>30 €</strong><small>Replay & support inclus — 40 premiers inscrits</small></div>
+    </div>
+    <p style="margin-top:18px"><a class="cta" href="https://www.paypal.com" target="_blank" rel="noopener">Effectuer un paiement</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Téléphone :</strong> <a href="tel:0769180298">07 69 18 02 98</a></p>
+    <p><strong>Cabinet :</strong> 8/12 avenue du 4 Septembre, Saint-Maur-des-Fossés</p>
+    <p><strong>Email :</strong> <a href="mailto:xavier.audebert.naturopathe@gmail.com">xavier.audebert.naturopathe@gmail.com</a></p>
+    <p><strong>Prise de RDV :</strong> Resalib (tapez « naturopathe Saint-Maur-des-Fossés »)</p>
+  </section>
+
+</main>
+
+<footer>
+  <span class="brand">Xa · Naturopathe</span>
+  <p>Xavier Audebert — Naturopathe hygiéniste & Réflexologue plantaire</p>
+  <p>Saint-Maur-des-Fossés · 07 69 18 02 98</p>
+  <div class="links">
+    <a href="#presentation">Présentation</a>·
+    <a href="#articles">Articles</a>·
+    <a href="#tarifs">Tarifs</a>·
+    <a href="#contact">Contact</a>
+  </div>
+  <p style="margin-top:20px;font-size:.8rem">RGPD : vos informations personnelles ne sont utilisées que dans le cadre de votre suivi naturopathique.</p>
+</footer>
+
 </body>
 </html>
-
