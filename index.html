@@ -152,6 +152,27 @@
   }
   .article-full .collab-credit strong{color:var(--accent)}
 
+  .two-col-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:1.4em 0}
+  .two-col-box .box{
+    background:#faf7f1;border:1px solid var(--line);border-radius:12px;
+    padding:16px 20px;font-size:.95rem;color:#403c37;line-height:1.7;
+  }
+  .two-col-box .box strong{display:block;color:var(--brand);font-family:'Cormorant Garamond',serif;font-size:1.15rem;margin-bottom:.3em}
+
+  .steps-list{list-style:none;padding:0;margin:.8em 0}
+  .steps-list li{display:flex;gap:14px;margin-bottom:.9em;align-items:flex-start}
+  .steps-list .num{
+    flex-shrink:0;width:26px;height:26px;border-radius:50%;
+    background:var(--brand-2);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:.78rem;font-weight:600;margin-top:2px;
+  }
+  .tip-box{
+    background:#f3f8f3;border-left:3px solid var(--brand-2);border-radius:0 10px 10px 0;
+    padding:12px 18px;margin:1.2em 0;font-size:.95rem;color:#403c37;line-height:1.7;
+  }
+  .tip-box strong{color:var(--brand)}
+
   footer{
     background:#2d2a26;color:#dcd6c8;padding:50px 22px;margin-top:60px;text-align:center;
   }
@@ -255,7 +276,7 @@
     <ul class="clean">
       <li>Réflexologie plantaire — 10 & 11 avril 2025, CMA de Melun <em>(complète)</em></li>
       <li>Gymnastique des organes — 10/06/25, visio 3h <em>(replay disponible)</em></li>
-      <li><strong>Produits de la ruche & leurs bienfaits</strong> — fin novembre 2025, visio 1h30 — <em>inscriptions ouvertes</em></li>
+      <li><strong>Produits de la ruche & leurs bienfaits</strong> — fin novembre 2025// complète, visio 1h30 — <em>(Replay disponible sur demande)</em></li>
     </ul>
     <p>Renseignements : <a href="tel:0769180298">07 69 18 02 98</a></p>
   </section>
@@ -279,10 +300,20 @@
       <article class="article-card">
         <div class="thumb">💧</div>
         <div class="body">
-          <span class="meta">Hydrologie · 5 min</span>
-          <h3>L'eau, première médecine du naturopathe</h3>
-          <p>Pourquoi, combien, quand et comment boire — les clés pour faire de l'eau votre meilleure alliée santé.</p>
+          <span class="meta">Hydrologie · 8 min</span>
+          <h3>L'eau, source de santé</h3>
+          <p>De la boisson quotidienne aux applications externes, l'eau est l'un des piliers les plus anciens — et les plus accessibles — de la naturopathie.</p>
           <a class="read" href="#article-eau">Lire l'article →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="thumb" style="background:linear-gradient(135deg,#c8e0c8,#5a8a5a)">❄️</div>
+        <div class="body">
+          <span class="meta">Prévention · 7 min</span>
+          <h3>Passer l'hiver sans tomber malade</h3>
+          <p>Comment la naturopathie peut réduire les récidives des fragilités respiratoires et ORL de la saison froide.</p>
+          <a class="read" href="#article-hiver">Lire l'article →</a>
         </div>
       </article>
 
@@ -312,42 +343,124 @@
   <!-- ====== ARTICLE EAU ====== -->
   <article id="article-eau" class="article-full">
     <span class="meta">Article · Hydrologie</span>
-    <h2>L'eau, première médecine du naturopathe</h2>
+    <h2>L'eau, source de santé</h2>
     <p class="meta">Par Xavier Audebert — Naturopathe hygiéniste</p>
-    <div class="collab-credit">✍️ En collaboration avec <strong>Carole Berger</strong> pour le magazine <em>Les Nouvelles Esthétiques</em></div>
 
-    <p>En naturopathie hygiéniste, l'eau n'est pas un détail : c'est le premier des outils de santé. Notre corps en est composé à près de 65 %, notre sang à 80 %, notre cerveau à plus de 75 %. Chaque cellule, chaque organe, chaque fonction vitale dépend d'un terrain bien hydraté. Pourtant, beaucoup d'entre nous boivent trop peu, trop tard, ou la mauvaise eau.</p>
+    <p>L'eau représente 60 à 65 % du poids corporel d'un adulte. En naturopathie, son utilisation — appelée hydrologie — occupe aujourd'hui la quatrième place parmi les techniques de référence. Bien avant cela, elle était au cœur de l'hygiénisme, ce courant médical qui ne jurait que par les moyens naturels : l'eau, le jeûne, l'alimentation, le soleil et le repos.</p>
 
-    <h3>Pourquoi l'eau est essentielle</h3>
-    <p>L'eau intervient dans presque tout : transport des nutriments, élimination des déchets via les reins, régulation de la température, lubrification des articulations, qualité de la peau, tonus mental. Une déshydratation même légère (1 à 2 % du poids corporel) suffit à provoquer fatigue, maux de tête, baisse de concentration et constipation.</p>
+    <h3>Un peu d'histoire</h3>
+    <p>La naturopathie française a été synthétisée par Pierre Valentin Marchesseau vers 1930, en puisant dans l'hygiénisme et plusieurs médecines traditionnelles. Marchesseau s'inspira notamment de la médecine ayurvédique — par l'intermédiaire du penseur indien Jiddu Krishnamurti — ainsi que de médecins hygiénistes comme Paul Carton, Georges Rouhet ou le Dr Salmanoff.</p>
+    <p>Les pionniers de l'hydrothérapie — le Dr Priessnitz (fondateur de la discipline), le prêtre Kneipp et le Dr Salmanoff — ont permis des avancées considérables, au point que l'hydrologie était encore la troisième technique majeure de la naturopathie jusque dans les années 2000.</p>
+    <blockquote>« Il n'y a pas que les malades qui aient besoin de bains ; les bien-portants doivent en user tout autant pour vivre en bonne santé. » — Pierre Valentin Marchesseau</blockquote>
 
-    <blockquote>« Là où l'eau circule, la vie circule. Là où elle stagne ou manque, le terrain s'encrasse. »</blockquote>
+    <h3>L'eau bue : bien plus qu'une question de quantité</h3>
+    <p>Boire semble anodin. Pourtant, le choix de l'eau, sa température et le moment où on la consomme influencent directement la digestion et le bien-être général.</p>
 
-    <h3>Combien boire chaque jour ?</h3>
-    <p>La recommandation classique de <strong>1,5 à 2 litres par jour</strong> reste un bon repère, à adapter selon votre poids, votre activité physique, la saison et votre alimentation. Une personne qui consomme beaucoup de fruits et légumes frais (eux-mêmes très hydratants) aura des besoins légèrement inférieurs à quelqu'un dont l'alimentation est sèche et transformée.</p>
+    <h3>Eau minéralisée ou eau légère ?</h3>
+    <p>Les minéraux de l'eau sont absorbés par nos tissus. Une eau riche en magnésium et en calcium soutient la détente musculaire et nerveuse — des études montrent notamment que l'anxiété diminue lorsque les apports en magnésium augmentent. Ces eaux richement minéralisées sont particulièrement utiles lors d'une cure de revitalisation.</p>
+    <p>À l'inverse, lors d'une cure de détoxification, une eau peu minéralisée (type Mont Roucous, Rosée de la Reine ou Montcalm) est préférable : moins chargée en minéraux, elle transporte plus efficacement les déchets métaboliques et les toxiques environnementaux vers les organes éliminateurs — la peau, les poumons, le foie, l'intestin et les reins.</p>
 
-    <h3>Quand boire ?</h3>
+    <h3>La température de l'eau compte</h3>
+    <p>Nos enzymes digestives fonctionnent à une température optimale d'environ 40 °C. Boire de l'eau froide pendant le repas refroidit les sucs digestifs et ralentit la digestion. Une eau à température ambiante respecte cet équilibre et facilite le travail des enzymes.</p>
+    <p>Boire de l'eau tiède pendant le repas aide également à décompacter les amidons (céréales, féculents) et accompagne les sucs digestifs alcalins. En revanche, boire une heure ou deux après le repas peut diluer les sucs acides nécessaires à la digestion des protéines et alourdir la sensation digestive. Si la soif se manifeste, il reste toujours judicieux de boire — quel que soit le moment.</p>
+
+    <h3>L'eau appliquée en externe</h3>
+    <p>Appliquée sur le corps, l'eau agit à la manière d'un massage ou d'un exercice physique : elle remet en mouvement les liquides de l'organisme (sang, lymphe, sérums) et améliore les échanges cellulaires dans tous les tissus.</p>
+
+    <div class="two-col-box">
+      <div class="box">
+        <strong>Eau froide</strong>
+        Elle envoie les liquides vers l'intérieur : stimule les reins (diurèse), les poumons (ventilation) et les glandes endocrines. Revitalisante et tonifiante, elle renforce la résistance de l'organisme.
+      </div>
+      <div class="box">
+        <strong>Eau chaude</strong>
+        Elle attire les déchets vers la périphérie : stimule la transpiration, soulage le travail du foie, et crée un état passager de fièvre artificielle bénéfique pour l'élimination.
+      </div>
+    </div>
+
+    <h3>La règle d'or de l'eau froide</h3>
+    <p>Toute application d'eau froide (bain ou douche à environ 20 °C) doit être suivie d'une réaction chaude spontanée de l'organisme. Si cette réaction ne se produit pas, c'est que l'effort demandé est trop important : il faut soit se réchauffer plus intensément avant, soit augmenter progressivement la température jusqu'à atteindre 20 °C. Les saisons chaudes sont idéales pour débuter ; en hiver, des frictions ou de l'activité physique sont indispensables avant l'application.</p>
+    <p>On peut commencer par des applications localisées (pieds, mains), puis élargir progressivement en jouant sur la température, la durée et la surface exposée.</p>
+
+    <h3>Les bains chauds</h3>
+    <p>On entre dans une eau à 37 °C, puis on monte progressivement jusqu'à 39–40 °C. La durée recommandée est de 10 à 20 minutes. Les premières gouttes de sueur sur le front indiquent la fin du bain — leur apparition rapide signale un bon niveau de vitalité. Sans baignoire, une douche chaude (sans mouiller la tête) suivie de frictions sur le corps sec produit des effets similaires. Dans les deux cas, s'allonger ensuite sous une couette, jambes légèrement surélevées, permet une deuxième transpiration bénéfique.</p>
+
+    <h3>Adapter les pratiques à son tempérament</h3>
+    <p>La naturopathie distingue deux grands tempéraments pour guider l'hydrologie externe :</p>
     <ul class="clean">
-      <li><strong>Au réveil</strong> : un grand verre d'eau tiède pour relancer en douceur les émonctoires.</li>
-      <li><strong>Entre les repas</strong> : pour ne pas diluer les sucs digestifs.</li>
-      <li><strong>En petites gorgées</strong> tout au long de la journée plutôt qu'un litre d'un coup.</li>
-      <li><strong>Avant 18 h</strong> de préférence, pour ne pas perturber le sommeil.</li>
+      <li><strong>Tempérament dilaté</strong> : teint rosé, résistant au froid, plutôt trapu. Tolère bien les applications froides.</li>
+      <li><strong>Tempérament rétracté</strong> : teint pâle, longiligne, frileux. Préférera des applications plus douces, à température progressive.</li>
     </ul>
 
-    <h3>Quelle eau choisir ?</h3>
-    <p>En naturopathie, on privilégie une <strong>eau peu minéralisée</strong> (résidu sec inférieur à 150 mg/L) : Mont Roucous, Montcalm, Rosée de la Reine, Volvic… Ces eaux « légères » facilitent le drainage des déchets sans surcharger les reins. Les eaux fortement minéralisées (Hépar, Contrex, Vichy) sont des eaux thérapeutiques, à utiliser ponctuellement et non au quotidien.</p>
-    <p>L'eau du robinet, si elle est filtrée (charbon, osmose, perles de céramique), reste une option écologique et économique tout à fait valable.</p>
-
-    <h3>Les signes d'une bonne hydratation</h3>
-    <ul class="clean">
-      <li>Urines claires, peu odorantes, 5 à 7 fois par jour</li>
-      <li>Peau souple, lèvres non desséchées</li>
-      <li>Transit régulier</li>
-      <li>Énergie stable, esprit clair</li>
+    <p>Un exemple de journée type :</p>
+    <ul class="steps-list">
+      <li><span class="num">1</span><span>Au saut du lit (corps encore chaud) : douche froide pour les dilatés ; ablutions fraîches au gant sur l'ensemble du corps pour les rétractés, pieds dans l'eau chaude.</span></li>
+      <li><span class="num">2</span><span>Après le sport (corps bien réchauffé) : douche froide pour les dilatés ; douche tiède pour les rétractés.</span></li>
+      <li><span class="num">3</span><span>En fin de journée (après station debout prolongée) : applications d'eau froide sur les jambes, pour les deux tempéraments.</span></li>
     </ul>
 
-    <h3>En pratique cette semaine</h3>
-    <p>Posez une bouteille ou une carafe en évidence sur votre bureau. Buvez un verre toutes les heures. Observez, sans jugement, ce qui change : votre énergie, votre humeur, votre digestion. L'eau ne remplace pas une bonne hygiène de vie — elle en est la fondation.</p>
+    <h3>En résumé</h3>
+    <p>En interne, l'eau apaise le mental, transporte les déchets vers les voies d'élimination et soutient la digestion. En externe, selon la température et le tempérament de chacun, elle revitalise, stimule les organes éliminateurs ou favorise la détoxification par la chaleur. Un outil de prévention simple, naturel — et à redécouvrir.</p>
+
+    <p style="margin-top:2em"><a href="#articles" class="cta" style="font-size:.95rem;padding:10px 22px">← Retour aux articles</a></p>
+  </article>
+
+  <!-- ====== ARTICLE HIVER ====== -->
+  <article id="article-hiver" class="article-full">
+    <span class="meta">Article · Prévention & Immunité</span>
+    <h2>Passer l'hiver sans tomber malade</h2>
+    <p class="meta">Par Xavier Audebert — Naturopathe hygiéniste</p>
+
+    <p>Nez qui coule, gorge qui gratte, toux grasse… Ces désagréments hivernaux fragilisent de plus en plus de personnes. Si une consultation médicale s'impose dès leur apparition, la naturopathie, elle, agit en amont : son rôle est de prévenir les récidives, pas de traiter ce qui est déjà installé.</p>
+
+    <h3>À l'origine des fragilités hivernales : les mucosités</h3>
+    <p>La naturopathie identifie une cause commune à la quasi-totalité des maux de l'hiver : l'accumulation de mucosités dans la sphère ORL. Ces sécrétions encombrent les voies respiratoires et créent un milieu favorable à la prolifération des micro-organismes.</p>
+    <p>Leur production suit un mécanisme précis. Les premiers signaux sont discrets — digestion ralentie, nez encombré le matin, légère toux sans raison apparente. Puis :</p>
+
+    <ul class="steps-list">
+      <li><span class="num">1</span><span>L'organisme, saturé de calories non utilisées (graisses, sucres), convertit ces excès en lipides circulants.</span></li>
+      <li><span class="num">2</span><span>Ces lipides sont pris en charge par des cellules pulmonaires spécialisées, les lipophages, qui les oxydent.</span></li>
+      <li><span class="num">3</span><span>Les mucosités remontent alors vers le nez, la gorge, les oreilles — parfois les yeux.</span></li>
+    </ul>
+
+    <blockquote>On tousse, on crache, en somme, nos excès de laitages, pâtisseries et céréales raffinées.</blockquote>
+
+    <h3>L'alimentation comme premier levier</h3>
+    <p>En hiver, l'instinct pousse vers les aliments gras et les féculents — un mécanisme de thermorégulation tout à fait naturel. Le problème n'est pas leur présence dans l'assiette, mais leur proportion.</p>
+    <p>La règle simple à retenir : penser <em>végétaux d'abord</em>. Les légumes cuits ou crus constituent la base ; les protéines (végétales ou animales) et les glucides (pain, riz, pomme de terre) viennent en complément, selon l'activité physique et la tolérance digestive de chacun.</p>
+    <div class="tip-box"><strong>Pour les cuissons :</strong> privilégier l'huile d'olive ou l'huile de coco. Pour l'assaisonnement, les huiles de première pression à froid (noix, lin, cameline) aident à réduire l'inflammation des muqueuses. À conserver au réfrigérateur, bouteille fermée, un mois maximum.</div>
+
+    <h3>Rééduquer sa respiration</h3>
+    <p>La fonction fait l'organe : des poumons peu sollicités fonctionnent au ralenti. Deux gestes quotidiens suffisent à changer la donne.</p>
+    <p><strong>Le matin :</strong> lavage du nez à l'eau de mer hypertonique, puis exercice de respiration complète diaphragmatique. En pratique — assis sur une chaise, un flacon d'huile essentielle expectorante tenu près du nez (pin sylvestre ou eucalyptus globulus) : inspirer 6 secondes par le nez, retenir 3 secondes, expirer 6 secondes par la bouche. Répéter une quinzaine de fois.</p>
+    <p><strong>Rappel de base :</strong> l'air inspiré entre par le nez, sort par la bouche, et le ventre se gonfle à l'inspiration — pas la poitrine.</p>
+    <div class="tip-box"><strong>Yoga et ouverture thoracique :</strong> certaines postures (Sphinx, Chameau, Arc, Serpent) mobilisent la cage thoracique en profondeur. Un enseignant qualifié est recommandé pour les premiers pas.</div>
+
+    <h3>Chouchouter son foie</h3>
+    <p>Un accompagnement naturopathique sans parler du foie serait incomplet. Un foie en bonne santé — bien vascularisé, efficace dans sa fonction détoxifiante — est la clef pour soulager les poumons et permettre l'évacuation des mucosités.</p>
+    <p>Trois habitudes concrètes :</p>
+    <ul class="steps-list">
+      <li><span class="num">↳</span><span><strong>La bouillotte :</strong> 20 minutes sur le côté droit du ventre, les soirs d'hiver. La chaleur augmente la capacité filtrante du foie.</span></li>
+      <li><span class="num">↳</span><span><strong>Le mouvement :</strong> squats ou course avec quelques sprints, sur un corps échauffé. Les grands réservoirs sanguins mobilisés favorisent l'afflux sanguin vers le foie.</span></li>
+      <li><span class="num">↳</span><span><strong>Les plantes de saison :</strong> poireaux cuits, mâche, persil — stimulent en douceur le transit intestinal. Objectif : une selle supplémentaire par jour.</span></li>
+    </ul>
+
+    <h3>Les alliés naturels</h3>
+
+    <h3 style="margin-top:.8em">La propolis</h3>
+    <p>Récoltée sur les bourgeons d'arbres par les abeilles pour stériliser leur ruche, la propolis agit comme barrière contre les micro-organismes. En cas de fragilité des voies respiratoires, et avec l'accord d'un médecin :</p>
+    <ul class="clean">
+      <li><strong>Propolis grande A :</strong> à mâcher 2 à 3 fois par jour, en quantité d'un petit pois à une noisette selon l'âge et la gravité.</li>
+      <li><strong>Extrait aqueux de propolis blanche</strong> (pour les enfants de plus de 36 mois et les femmes enceintes) : 5 gouttes deux fois par jour pour les jeunes enfants, 10 gouttes deux fois par jour pour les adultes.</li>
+    </ul>
+    <div class="tip-box">La propolis grande A et la propolis blanche se trouvent en magasin diététique ou chez un apiculteur local.</div>
+
+    <h3>Les aromates de cuisine</h3>
+    <p>Thym, sarriette, origan, clou de girofle, cannelle — ces aromates courants possèdent des propriétés reconnues pour assainir le tube digestif et soutenir les défenses naturelles de l'organisme. À utiliser sans retenue dans les plats salés comme sucrés.</p>
+
+    <h3>En résumé</h3>
+    <p>Rééquilibrer l'assiette, retrouver une respiration consciente, soutenir le foie, et s'appuyer sur des remèdes naturels comme la propolis ou les aromates : ces outils simples permettent à l'organisme de traverser l'hiver sans rechute systématique.</p>
+    <p>Lorsque les fragilités se répètent malgré tout, c'est souvent le signe d'une cause sous-jacente à identifier. C'est précisément là qu'un accompagnement naturopathique personnalisé prend tout son sens.</p>
 
     <p style="margin-top:2em"><a href="#articles" class="cta" style="font-size:.95rem;padding:10px 22px">← Retour aux articles</a></p>
   </article>
