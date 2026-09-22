@@ -117,6 +117,16 @@
   .price:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
   .price strong{display:block;color:var(--brand);font-size:1.4rem;margin-top:6px;font-family:'Cormorant Garamond',serif}
 
+  .partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
+  .partner-card{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:20px 22px;transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .partner-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+  .partner-card h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--brand);margin-bottom:6px}
+  .partner-card p{font-size:.92rem;margin:0}
+  .partner-card a{font-weight:600}
+
   .articles{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:24px}
   .article-card{
     background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;
@@ -271,7 +281,7 @@
   </section>
 
   <section id="formations">
-    <h2>Formations</h2>
+    <h2>Mes Formations</h2>
     <p>Formateur en naturopathie, réflexologie plantaire et accompagnement au projet professionnel, je propose des spécialisations selon l'approche hygiéniste de P.V. Marchesseau.</p>
     <ul class="clean">
       <li>Réflexologie plantaire — 10 & 11 avril 2025, CMA de Melun <em>(complète)</em></li>
@@ -279,6 +289,35 @@
       <li><strong>Produits de la ruche & leurs bienfaits</strong> — fin novembre 2025// complète, visio 1h30 — <em>(Replay disponible sur demande)</em></li>
     </ul>
     <p>Renseignements : <a href="tel:0769180298">07 69 18 02 98</a></p>
+
+    <h3 style="margin-top:1.6em">🤝 Écoles partenaires</h3>
+    <p class="lead">Les écoles avec lesquelles j'interviens en tant que formateur.</p>
+    <div class="partners-grid">
+      <div class="partner-card">
+        <h4>Réflexalto</h4>
+        <p>L'école où j'enseigne la réflexologie plantaire (superbe équipe) — <a href="https://reflexalto.com/">découvrir la formation</a>.</p>
+      </div>
+      <div class="partner-card">
+        <h4>Ze Massage</h4>
+        <p>Une école pour laquelle j'anime des formations en réflexologie plantaire (un lieu extraordinaire) — <a href="https://www.zemassage.fr/">en savoir plus</a>.</p>
+      </div>
+      <div class="partner-card">
+        <h4>Naturalto</h4>
+        <p>J'y anime plusieurs modules de la <a href="https://naturalto-formation.com/formation-naturopathe/">formation en naturopathie</a>.</p>
+      </div>
+      <div class="partner-card">
+        <h4>Harmonika</h4>
+        <p>Le réseau de formation qui réunit Réflexalto et leurs écoles partenaires  comme Naturalto — <a href="https://harmonika-formation.com/ecoles/reflexalto">découvrir le réseau</a>.</p>
+      </div>
+      <div class="partner-card">
+        <h4>AENI</h4>
+        <p>Une école que j'apprécie pour se former à la naturopathie traditionnelle — <a href="https://www.aeni.fr/">voir leurs formations</a>.</p>
+      </div>
+      <div class="partner-card">
+        <h4>École de Santé Naturelle</h4>
+        <p>Une autre belle adresse pour apprendre la naturopathie validée scientifiquement — <a href="https://www.ecole-sante-naturelle.fr/">voir leurs formations</a>.</p>
+      </div>
+
   </section>
 
   <section id="ecotherapie">
